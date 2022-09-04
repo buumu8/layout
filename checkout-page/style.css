@@ -168,3 +168,32 @@
   color: white;
   border: none;
 }
+
+input[type="submit"] {
+  transition: transform 0.2s ease-in;
+}
+
+input[type="submit"]:hover {
+  transform: translateY(0.3rem);
+}
+@media screen and (max-width: 800px) {
+  .checkout {
+    flex-direction: column;
+  }
+
+  .checkout__billing,
+  .checkout__order {
+    flex-basis: 100%;
+  }
+
+  .checkout__billing--form__name,
+  .checkout__billing--form__address,
+  .checkout__billing--form__country,
+  .checkout__billing--form__zipcode {
+    flex-direction: column;
+  }
+
+  .checkout__billing--form__coupon > div {
+    flex-direction: column;
+  }
+}
