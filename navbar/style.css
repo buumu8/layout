@@ -118,6 +118,39 @@ a {
   padding: 0;
 }
 
+input[type="submit"],
+select {
+  transition: all 0.1s ease-in;
+}
+
+input[type="submit"]:hover,
+select:hover {
+  filter: brightness(140%);
+}
+
+/* Link hover underline Effect */
+a {
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  transform: scale(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+}
+
+a:hover::after {
+  transform: scale(1);
+  transform-origin: left;
+}
+
 @media screen and (max-width: 900px) {
   .header__meta,
   .header__categories,
@@ -171,16 +204,6 @@ a {
 
   .header__meta--links {
     order: -1;
-  }
-
-  input[type="submit"],
-  select {
-    transition: all 0.1s ease-in;
-  }
-
-  input[type="submit"]:hover,
-  select:hover {
-    filter: brightness(140%);
   }
 }
 
