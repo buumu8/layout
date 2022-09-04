@@ -259,9 +259,9 @@ a:hover::after {
 
   /*END OF HAMBURGER OPEN */
 
-  .header__meta--form {
-    flex-direction: column;
-    gap: 1rem;
+  .header {
+    height: 100vh;
+    overflow: hidden;
   }
 
   .header__meta--form fieldset {
@@ -312,10 +312,6 @@ a:hover::after {
 }
 
 @media screen and (max-width: 580px) {
-  .header {
-    height: 100vh;
-    overflow: hidden;
-  }
   .header__meta--links li:not(:last-child),
   .header__nav--links li:not(:last-child) {
     padding-right: 1rem;
@@ -323,7 +319,11 @@ a:hover::after {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 500px) {
+  .header__meta--form {
+    flex-direction: column;
+    gap: 1rem;
+  }
   .header__meta--links li:not(:last-child),
   .header__nav--links li:not(:last-child) {
     padding-right: 0;
