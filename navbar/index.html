@@ -16,7 +16,7 @@
 
 <body>
   <header class="header">
-    <div class="header__meta open">
+    <div class="header__meta" id="header__meta">
       <form class="header__meta--form">
         <fieldset>
           <label for="language">language</label>
@@ -48,45 +48,45 @@
         <li><a href="#">FAQs</a></li>
       </ul>
     </div>
-    <div class="header__categories">
+    <div class="header__categories" id="header__categories"">
       <div>
-        <a href="#" class="header__categories--logo">EL</a>
-        <form class="header__categories--form">
-          <select name="categories">
-            <option>Womens</option>
-            <option>Mens</option>
-            <option>Accessories</option>
-            <option>Kids</option>
-            <option>All</option>
-          </select>
-          <input type="search" placeholder="I'm shopping for...">
-          <input type="submit" value="Search">
-        </form>
-      </div>
-      <div>
-        <div class="header__categories--favorites">
-          <div>
-            <i class="fa-solid fa-heart"></i>
-            <span>3</span>
-          </div>
-          <div>
-            <a href="#">Favourites</a>
-            <a href="#">My Wishlist</a>
-          </div>
+        <a href=" #" class="header__categories--logo">EL</a>
+      <form class="header__categories--form">
+        <select name="categories">
+          <option>Womens</option>
+          <option>Mens</option>
+          <option>Accessories</option>
+          <option>Kids</option>
+          <option>All</option>
+        </select>
+        <input type="search" placeholder="I'm shopping for...">
+        <input type="submit" value="Search">
+      </form>
+    </div>
+    <div>
+      <div class="header__categories--favorites">
+        <div>
+          <i class="fa-solid fa-heart"></i>
+          <span>3</span>
         </div>
-        <div class="header__categories--login">
-          <div>
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span>1</span>
-          </div>
-          <div>
-            <a href="#">Login</a>
-            <a href="#">My Account</a>
-          </div>
+        <div>
+          <a href="#">Favourites</a>
+          <a href="#">My Wishlist</a>
+        </div>
+      </div>
+      <div class="header__categories--login">
+        <div>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>1</span>
+        </div>
+        <div>
+          <a href="#">Login</a>
+          <a href="#">My Account</a>
         </div>
       </div>
     </div>
-    <nav class="header__nav">
+    </div>
+    <nav class="header__nav" id="header__nav">
       <ul class="header__nav--links">
         <li>
           <a href="#">Womens</a>
@@ -100,6 +100,13 @@
         <i class="fa-solid fa-square-phone"></i>Need help? 0093 1123 4564 7897
       </div>
     </nav>
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+    </div>
+    <div id="mobile-logo" class="mobile-logo">EL</div>
   </header>
   <!-- Script -->
   <script src="script.js"></script>

@@ -1,11 +1,18 @@
 .header {
-  background-color: #0d4eb0;
+  background: rgb(9, 9, 121);
+  background: linear-gradient(
+    90deg,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(13, 78, 176, 1) 35%,
+    rgb(3, 85, 101) 100%
+  );
   padding: 4rem;
   color: white;
 
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  position: relative;
 }
 
 .header__meta,
@@ -115,7 +122,9 @@ a {
 }
 
 .header__categories--logo {
-  padding: 0;
+  padding: 0 1rem;
+  font-size: 5rem;
+  border: 1px solid white;
 }
 
 input[type="submit"],
@@ -151,13 +160,104 @@ a:hover::after {
   transform-origin: left;
 }
 
-@media screen and (max-width: 900px) {
+/* HAMBURGER */
+.hamburger {
+  position: fixed;
+}
+
+.mobile-logo {
+  transform: translate(-10rem, -10rem);
+}
+
+@media screen and (max-width: 970px) {
+  /* HAMBURGER OPEN */
+  .hamburger {
+    height: 5rem;
+    width: 5rem;
+    position: fixed;
+    top: 1.5rem;
+    right: 5rem;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 10;
+  }
+
+  .hamburger > div {
+    height: 3px;
+    background-color: white;
+    transition: all 0.25s ease;
+    transform: rotate(0);
+  }
+
+  .hamburger:is(.open) > div:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger:is(.open) > div:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .hamburger:is(.open) > div:nth-child(2) {
+    display: none;
+  }
+
+  .hamburger:focus {
+    outline: none;
+  }
   .header__meta,
   .header__categories,
   .header__nav {
+    transform: translateY(-50rem);
+    transform-origin: bottom;
+    transition: all 0.5s ease-out;
+  }
+
+  .header__meta:is(.open),
+  .header__categories:is(.open),
+  .header__nav:is(.open) {
     flex-direction: column;
     gap: 2rem;
+    transform: translateY(0);
+    transform-origin: top;
   }
+
+  .mobile-logo {
+    font-size: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .mobile-logo::after {
+    content: "your favourite place";
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.5s ease;
+  }
+
+  .mobile-logo:is(.open) {
+    font-size: 5rem;
+    top: 0;
+    left: 0;
+    transform: translate(20%, 10%);
+  }
+
+  .mobile-logo:is(.open)::after {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .header__meta {
+    padding-top: 4rem;
+  }
+
+  /*END OF HAMBURGER OPEN */
 
   .header__meta--form {
     flex-direction: column;
@@ -205,9 +305,17 @@ a:hover::after {
   .header__meta--links {
     order: -1;
   }
+
+  .header__categories--logo {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 580px) {
+  .header {
+    height: 100vh;
+    overflow: hidden;
+  }
   .header__meta--links li:not(:last-child),
   .header__nav--links li:not(:last-child) {
     padding-right: 1rem;
