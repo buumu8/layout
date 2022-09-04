@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #0d4eb0;
+  --seconary-color: #1363df;
+  --font-color: white;
+}
+
 .header {
   background: rgb(9, 9, 121);
   background: linear-gradient(
@@ -7,7 +13,7 @@
     rgb(3, 85, 101) 100%
   );
   padding: 4rem;
-  color: white;
+  color: var(--font-color);
 
   display: flex;
   flex-direction: column;
@@ -39,21 +45,21 @@
 
 select,
 input[type="submit"] {
-  color: white;
+  color: var(--font-color);
   border: none;
-  background-color: #1363df;
+  background-color: var(--secondary-color);
   padding: 0.7rem 2rem;
 }
 
 input[type="search"] {
-  background-color: white;
+  background-color: var(--font-color);
   /* width: 35%; */
   flex-grow: 1;
   padding: 0.7rem 2rem;
 }
 
 a {
-  color: white;
+  color: var(--font-color);
   font-weight: 700;
   padding: 0;
 }
@@ -104,8 +110,8 @@ a {
   right: -1rem;
   font-size: 1rem;
   padding: 0 0.5rem;
-  background-color: white;
-  color: #0d4eb0;
+  background-color: var(--font-color);
+  color: var(--primary-color);
   border-radius: 50%;
 }
 
@@ -138,24 +144,24 @@ select:hover {
 }
 
 /* Link hover underline Effect */
-a {
+header a {
   position: relative;
 }
 
-a::after {
+header a::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   height: 1px;
   width: 100%;
-  background-color: white;
+  background-color: var(--font-color);
   transform: scale(0);
   transform-origin: right;
   transition: transform 0.5s ease-in-out;
 }
 
-a:hover::after {
+header a:hover::after {
   transform: scale(1);
   transform-origin: left;
 }
@@ -167,6 +173,60 @@ a:hover::after {
 
 .mobile-logo {
   transform: translate(-10rem, -10rem);
+}
+
+/******************* HERO SECTION */
+.hero {
+  display: flex;
+  gap: 2rem;
+  padding: 4rem;
+  height: 100vh;
+  position: relative;
+}
+
+.hero__img {
+  object-position: center 15%;
+}
+
+.hero__content {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero__content--title {
+  color: var(--primary-color);
+  background: -webkit-linear-gradient(var(--primary-color), var(--seconary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 0.85;
+}
+
+.hero__content--link {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  align-self: flex-start;
+}
+
+.hero__content--link:hover {
+  filter: brightness(130%);
+}
+
+.hero__content > div:last-child {
+  position: absolute;
+  bottom: 3rem;
+  right: 10rem;
+
+  display: flex;
+}
+
+.hero__content > div:last-child i {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 1rem;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 970px) {
@@ -188,7 +248,7 @@ a:hover::after {
 
   .hamburger > div {
     height: 3px;
-    background-color: white;
+    background-color: var(--font-color);
     transition: all 0.25s ease;
     transform: rotate(0);
   }
@@ -264,6 +324,11 @@ a:hover::after {
     overflow: hidden;
   }
 
+  .header:is(.open) {
+    height: auto;
+    overflow: hidden;
+  }
+
   .header__meta--form fieldset {
     flex-grow: 1;
   }
@@ -333,5 +398,22 @@ a:hover::after {
   .header__meta--links,
   .header__nav--links {
     flex-wrap: wrap;
+  }
+
+  /* ************************** HERO */
+  .hero {
+    flex-direction: column;
+
+    padding: 0;
+  }
+
+  .hero__img img {
+    height: 30rem;
+    object-fit: cover;
+    object-position: center 25%;
+  }
+
+  .hero__content {
+    padding: 1rem;
   }
 }
