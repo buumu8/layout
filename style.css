@@ -20,6 +20,14 @@ li::before {
   counter-increment: count;
   content: "Section " counter(count) ": ";
 }
+
+a {
+  text-decoration: none;
+}
 a:hover {
   color: palevioletred;
+}
+
+a:active {
+  color: black;
 }
