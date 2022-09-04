@@ -172,6 +172,16 @@ a {
   .header__meta--links {
     order: -1;
   }
+
+  input[type="submit"],
+  select {
+    transition: all 0.1s ease-in;
+  }
+
+  input[type="submit"]:hover,
+  select:hover {
+    filter: brightness(140%);
+  }
 }
 
 @media screen and (max-width: 580px) {
