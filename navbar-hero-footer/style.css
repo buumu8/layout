@@ -250,6 +250,116 @@ header a:hover::after {
   color: var(--font-color);
 }
 
+/* ******************* PRODUCT CAROUSEL */
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 5rem;
+}
+
+.products__title {
+  font-size: 5rem;
+  text-align: center;
+  color: var(--primary-color);
+  background: -webkit-linear-gradient(var(--primary-color), var(--seconary-color));
+  background-clip: text;
+}
+
+.products__para {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.products__container {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  justify-content: space-around;
+}
+
+.previous,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.previous {
+  left: -2.5rem;
+}
+
+.next {
+  right: -2.5rem;
+}
+
+.products__container--product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+
+  position: relative;
+}
+
+.products__container--product__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.products__container--product__img img {
+  transition: all 0.3sease-in;
+  border-radius: 0.5rem;
+}
+
+.products__container--product__img:hover img {
+  transform: scale(110%);
+}
+
+.products__container--product__purchase-features,
+.products__container--product__tag {
+  position: absolute;
+}
+
+.products__container--product__purchase-features {
+  top: 65%;
+  display: flex;
+  gap: 2rem;
+}
+
+.products__container--product__purchase-features i {
+  background-color: rgba(255 255 255 /0.8);
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.products__container--product__tag {
+  top: 5%;
+  right: 5%;
+  padding: 0.2rem 1.4rem;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.products__container--product__tag.new {
+  background-color: rgb(122 207 112);
+}
+
+.products__container--product__tag.hot {
+  background-color: rgb(209 90 88);
+}
+
 /******************* FOOTER SECTION */
 
 .footer {
@@ -315,6 +425,7 @@ header a:hover::after {
   display: flex;
   gap: 1rem;
 }
+
 @media screen and (max-width: 970px) {
   /* HAMBURGER OPEN */
   .hamburger {
@@ -459,6 +570,15 @@ header a:hover::after {
 
   .header__categories--logo {
     display: none;
+  }
+
+  /* ******************* PRODUCT CAROUSEL */
+  .products__container > div:not(:first-of-type) {
+    display: none;
+  }
+
+  .products__title {
+    font-size: 3rem;
   }
 
   /******************* FOOTER SECTION */
