@@ -52,7 +52,7 @@
 
 .checkout__billing--form__coupon div input:last-child {
   background-color: #333;
-  color: white;
+  color:var(--font-color)
 }
 
 /* CHECKOUT ORDER */
@@ -165,7 +165,7 @@
 .checkout__order--btn input {
   flex-grow: 1;
   background-color: rgb(49 239 212);
-  color: white;
+  color:var(--font-color)
   border: none;
 }
 
