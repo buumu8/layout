@@ -1,0 +1,151 @@
+.order {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  padding: 4rem;
+}
+
+.order__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order__content {
+  background-color: rgb(255 235 238);
+  padding: 4rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.order__content > div:first-of-type {
+  display: flex;
+  gap: 8rem;
+}
+
+.order__content--confirmation__title,
+.order__content--receiver-detials__title {
+  margin-bottom: 1rem;
+}
+
+.order__content--receiver-detials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.order__content--confirmation__desc san {
+  display: block;
+}
+
+.order__content--product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order__content--product__info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.order__content--product__info--img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.order__content--product__info--img img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.order__content--product__info > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order__content--product__info > div > div {
+  flex-basis: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order__payment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order__payment > div:first-of-type {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order__payment--shipment,
+.order__payment--method {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order__payment--method__desc span {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.order__payment--cost {
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order__payment--cost > p {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.order__payment--cost__link {
+  background-color: slategray;
+  text-align: center;
+  color: white;
+  border: 1px solid slategray;
+  transition: all 0.3s ease;
+}
+
+.order__payment--cost__link:hover {
+  background-color: white;
+  text-align: center;
+  color: slategray;
+}
+
+@media screen and (max-width: 900px) {
+  .order__content {
+    padding: 2rem;
+  }
+  .order__content--product__info,
+  .order__content--product,
+  .order__payment,
+  .order__payment > div {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .order__payment--cost {
+    width: 100%;
+  }
+
+  .order__summary,
+  .order__content > div:first-of-type,
+  .order__content {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+}

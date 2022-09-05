@@ -1,6 +1,6 @@
 :root {
   --primary-color: #0d4eb0;
-  --secondary-color: #1363df;
+  --secondary-color: #4585e4;
   --font-color: white;
 }
 
@@ -414,6 +414,14 @@ header a:hover::after {
   position: relative;
 }
 
+.products__container--product__name > a {
+  color: black;
+}
+
+.products__container--product__name > a:hover {
+  color: var(--primary-color);
+}
+
 .products__container--product__img {
   height: 100%;
   width: 100%;
@@ -446,6 +454,11 @@ header a:hover::after {
   border-radius: 50%;
   padding: 1rem;
   cursor: pointer;
+  color: black;
+}
+
+.products__container--product__purchase-features i:hover {
+  transform: scale(1.1);
 }
 
 .products__container--product__tag {
@@ -490,7 +503,7 @@ header a:hover::after {
 }
 
 .team__members--member {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   border-radius: 1rem;
   padding: 4rem 2rem;
   text-align: center;
