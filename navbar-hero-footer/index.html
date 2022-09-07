@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navbar</title>
+  <title>J8: your favorite place</title>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"
@@ -109,6 +109,24 @@
     </div>
     <div id="mobile-logo" class="mobile-logo">J8</div>
   </header>
+  <!-- Banner -->
+  <section class="banner">
+    <section class="banner__showcase">
+      <h6>Making your home beautiful</h6>
+      <h1>Best furniture <span>for the Best</span></h1>
+      <a href="#">Shop Now</a>
+      <div class="banner__showcase--navigation">
+        <div class="active"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+    <aside class="banner__aside">
+      <h6>limited time offer</h6>
+      <h2>Beautifully <span>Crafted</span></h2>
+    </aside>
+  </section>
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <figure class="hero__img">
@@ -198,7 +216,7 @@
         <h4 class="products__container--product__name"><a href="../product-page/index.html" target="_blank">Men's Shirt</a></h4>
         <p class="products__contaier--product__price">$35.00</p>
         <div class="products__container--product__purchase-features">
-          <i class="fa-solid fa-cart-shopping"></i>
+          <a href="../shopping-cart/index.html" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a>
           <a href="../product-page/index.html" target="_blank"><i class="fa-solid fa-eye"></i></a>
           <i class="fa-solid fa-heart"></i>
         </div>
@@ -214,8 +232,8 @@
         <h4 class="products__container--product__name">Women's Jacket</h4>
         <p class="products__contaier--product__price">$35.00</p>
         <div class="products__container--product__purchase-features">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <i class="fa-solid fa-eye"></i>
+          <a href="../shopping-cart/index.html" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="../product-page/index.html" target="_blank"><i class="fa-solid fa-eye"></i></a>
           <i class="fa-solid fa-heart"></i>
         </div>
         <div class="products__container--product__tag hot">
@@ -230,8 +248,8 @@
         <h4 class="products__container--product__name">Men's Jacket</h4>
         <p class="products__contaier--product__price">$35.00</p>
         <div class="products__container--product__purchase-features">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <i class="fa-solid fa-eye"></i>
+          <a href="../shopping-cart/index.html" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="../product-page/index.html" target="_blank"><i class="fa-solid fa-eye"></i></a>
           <i class="fa-solid fa-heart"></i>
         </div>
         <div class="products__container--product__tag hot">
@@ -246,8 +264,8 @@
         <h4 class="products__container--product__name">Women's Jacket</h4>
         <p class="products__contaier--product__price">$35.00</p>
         <div class="products__container--product__purchase-features">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <i class="fa-solid fa-eye"></i>
+          <a href="../shopping-cart/index.html" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="../product-page/index.html" target="_blank"><i class="fa-solid fa-eye"></i></a>
           <i class="fa-solid fa-heart"></i>
         </div>
         <div class="products__container--product__tag hot">
@@ -255,6 +273,53 @@
         </div>
       </div>
     </div>
+  </section>
+  <!-- CALL TO ACTION -->
+  <section class="collection">
+    <div class="collection__content">
+      <h2 class="collection__content--title">Get our Magnificent <span>collection</span></h2>
+      <p class="collection__content--para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dicta? <span>Lorem ipsum dolor sit
+          amet.</span></p>
+      <a href="#" class="collection__content--link">Explore</a>
+    </div>
+    <figure class="collection__img">
+      <img src="../images/1.jpg" alt="Products">
+    </figure>
+  </section>
+  <!-- CONTACT -->
+  <section class="contact">
+    <section class="contact__title">
+      <h6>Contact Us</h6>
+      <h2>Let's talk about your problem</h2>
+    </section>
+    <section class="contact__location">
+      <i class="contact__location--icon fas fa-location-dot"></i>
+      <h5>Our Location</h5>
+      <p>10 Ratchadamneon Nok Rd., Phayathai, Bangkok</p>
+    </section>
+    <section class="contact__email">
+      <i class="contact__email fa-regular fa-envelope"></i>
+      <h5>How can we help?</h5>
+      <p>contact@f8.com</p>
+    </section>
+    <form class="contact__form">
+      <h3>Send us Message</h3>
+
+      <fieldset class="contact__form--name">
+        <label for="name">name*</label><input type="text">
+      </fieldset>
+      <fieldset class="contact__form--email">
+        <label for="email">email*</label><input type="text">
+      </fieldset>
+      <fieldset class="contact__form--phone">
+        <label for="phone">phone*</label><input type="text">
+      </fieldset>
+      <fieldset class="contact__form--message">
+        <label for="message">message*</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      </fieldset>
+      <input type="submit" value="Send Message">
+    </form>
   </section>
   <!-- TEAM -->
   <section class="team">

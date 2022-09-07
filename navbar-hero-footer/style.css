@@ -189,6 +189,98 @@ header a:hover::after {
   transform: translate(-10rem, -10rem);
 }
 
+/************************** BANNER */
+
+.banner {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+
+  padding: 4rem;
+  height: 100vh;
+}
+
+.banner__showcase {
+  background-image: linear-gradient(to right, rgba(96 48 48 /0.8), rgba(96 48 48 /0.1)),
+    url("../images/images/5.1.jpg");
+  background-size: cover;
+  padding: 4rem;
+
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  align-content: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.banner__showcase > h6 {
+  color: var(--font-color);
+}
+
+.banner__showcase > h1 {
+  color: var(--font-color);
+  font-size: 8rem;
+  line-height: 1.1;
+  text-decoration: underline;
+}
+
+.banner__showcase > h1 span {
+  display: block;
+}
+
+.banner__showcase > a {
+  background-color: rgb(96, 48, 48);
+  justify-self: start;
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.banner__showcase--navigation {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1rem);
+  gap: 2rem;
+}
+
+.banner__showcase--navigation div {
+  height: 1rem;
+  width: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.banner__showcase--navigation div.active {
+  transform: scale(1.75);
+}
+
+.banner__aside {
+  background-image: url("../images/images/5.2.jpg");
+  background-size: cover;
+  background-position: right center;
+  padding: 4rem;
+
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  align-content: center;
+  justify-content: end;
+  gap: 1rem;
+  color: white;
+}
+
+.banner__aside span {
+  display: block;
+}
+
+.banner__aside h2 {
+  line-height: 1;
+}
+
 /******************* HERO SECTION */
 .hero {
   display: flex;
@@ -477,6 +569,161 @@ header a:hover::after {
 
 .products__container--product__tag.hot {
   background-color: rgb(209 90 88);
+}
+
+/* ******************* CALL TO ACTION  */
+.collection {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 40rem;
+  padding: 4rem;
+}
+
+.collection__content {
+  background-color: var(--primary-color);
+  padding: 4rem;
+  color: var(--font-color);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%, 0% 0%);
+
+  grid-column: 1 / span 5;
+  grid-row: 1/-1;
+
+  display: grid;
+  gap: 1rem;
+}
+
+.collection__content--title {
+  align-self: end;
+  line-height: 1;
+}
+
+.collection__content--title span {
+  display: block;
+  font-weight: 100;
+}
+
+.collection__content--para {
+  align-self: center;
+}
+
+.collection__content--para span {
+  display: flex;
+}
+
+.collection__content--link {
+  background-color: var(--font-color);
+  place-self: start;
+  padding: 1.5rem;
+  color: black;
+}
+
+.collection__img {
+  grid-column: 5 / -1;
+  grid-row: 1/-1;
+}
+
+.collection__img img {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+/* ************************* CONTACT*/
+.contact {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(7, min-content);
+  gap: 2rem;
+
+  padding: 4rem;
+  position: relative;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: var(--secondary-color);
+  z-index: -1;
+}
+
+.contact__title {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+.contact__location {
+  grid-column: 1/3;
+  grid-row: 5/6;
+}
+
+.contact__email {
+  grid-column: 4/6;
+  grid-row: 5/6;
+}
+
+.contact__location,
+.contact__email {
+  display: grid;
+  grid-template-columns: 3rem repeat(4, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  gap: 0.5rem;
+}
+
+.contact__location > i,
+.contact__email > i {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.contact__location > h5,
+.contact__email > h5 {
+  grid-column: 2/-1;
+  grid-row: 1/2;
+}
+
+.contact__location > p,
+.contact__email > p {
+  grid-column: 2/-1;
+  grid-row: 2/3;
+}
+
+.contact__form {
+  grid-column: 7/-1;
+  grid-row: 1/-1;
+  padding: 4rem;
+  background-repeat: 1rem;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px lightgray;
+}
+
+.contact__form input,
+.contact__form textarea {
+  border: none;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+
+.contact__form > fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, min-content);
+}
+
+.contact__form textarea {
+  height: 5rem;
+}
+
+.contact__form input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 1rem;
 }
 
 /* ************************* TEAM */
@@ -768,6 +1015,25 @@ header a:hover::after {
     display: none;
   }
 
+  /************************** BANNER */
+
+  .banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 1fr;
+    gap: 1rem;
+  }
+
+  .banner__showcase {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+  }
+
+  .banner__aside {
+    grid-row: 2/-1;
+    grid-column: 1/-1;
+  }
+
   /* *************************HERO SECTION */
 
   /* ******************* PRODUCT CAROUSEL */
@@ -777,6 +1043,28 @@ header a:hover::after {
 
   .products__title {
     font-size: 3rem;
+  }
+
+  /* ************************* CONTACT*/
+  .contact {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(10, min-content);
+  }
+
+  .contact__title {
+    grid-column: 1/-1;
+  }
+  .contact__location {
+    grid-column: 1/4;
+  }
+
+  .contact__email {
+    grid-column: 5/-1;
+  }
+
+  .contact__form {
+    grid-column: 1/-1;
+    grid-row: 6/-1;
   }
 
   /* ****************** TEAM */
@@ -842,6 +1130,12 @@ header a:hover::after {
     flex-wrap: wrap;
   }
 
+  /************************** BANNER */
+
+  .banner__showcase h1 {
+    font-size: calc(100% + 2rem);
+  }
+
   /* ************************** HERO */
   .hero {
     flex-direction: column;
@@ -857,6 +1151,18 @@ header a:hover::after {
 
   .hero__content {
     padding: 1rem;
+  }
+
+  /* ************************* CONTACT*/
+
+  .contact__location {
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
+
+  .contact__email {
+    grid-column: 1/-1;
+    grid-row: 4/5;
   }
 
   /* ************************** FOOTER */
